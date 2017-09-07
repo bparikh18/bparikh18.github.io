@@ -9,6 +9,6 @@
     </div>
 <ul class="list-group">
 <li class="list-group-item" ng-repeat="w in weatherResult.list">
-    <img src="http://openweathermap.org/img/w/{{ w.weather[0].icon }}.png"> {{ convertToDate(w.dt) | date: 'EEE, MMM d, y ha' }} <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> {{ w.main.temp | number: 0 }} &#8457; <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> {{ w.weather[0].description | capitalize }}
+    <img src="https://openweathermap.org/img/w/{{ w.weather[0].icon }}.png"> {{ convertToDate(w.dt) | date: 'EEE, MMM d, y ha' }} <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> {{ w.main.temp | number: 0 }} &#8457; <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> {{ w.weather[0].description | capitalize }}
 </li>
 </ul>
