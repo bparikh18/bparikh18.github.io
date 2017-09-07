@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <!-- load bootstrap and fontawesome via CDN -->
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+        
+        <!-- load angular via CDN -->
+        <script src="//code.angularjs.org/1.5.9/angular.min.js"></script>
+        <script src="//code.angularjs.org/1.5.9/angular-route.min.js"></script>
+        <script src="//code.angularjs.org/1.5.9/angular-resource.min.js"></script>
+        <script src="app.js"></script>
+    </head>
+    <body ng-app="weatherApp">
+        <div class="container-fluid">
+            <div class="well well-sm">
+                <a href="#/"><strong>Weather App (Angular JS)</strong></a>
+            </div>
+            <div ng-view></div>
+		</div>
+    </body>
+</html>

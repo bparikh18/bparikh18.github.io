@@ -1,0 +1,14 @@
+<div class="jumbotron" style="padding-top: 5px; padding-bottom: 5px">
+      <div class="container-fluid">
+        <h1 class="display-3">{{ weatherResult.city.name }}'s weather!</h1>
+        <p><a href="#/">Back to search</a></p>
+      </div>
+    </div>
+<div class="well well-sm">
+<a href="#/forecast/1" class="btn" ng-class="{ 'btn-info active': days === '1' }">24 Hours</a> <a class="btn" href="#/forecast/3" ng-class="{ 'btn-info active': days === '3' }">3 Day</a> <a class="btn" href="#/forecast/5" ng-class="{ 'btn-info active': days === '5' }">5 Day</a>
+    </div>
+<ul class="list-group">
+<li class="list-group-item" ng-repeat="w in weatherResult.list">
+    <img src="http://openweathermap.org/img/w/{{ w.weather[0].icon }}.png"> {{ convertToDate(w.dt) | date: 'EEE, MMM d, y ha' }} <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> {{ w.main.temp | number: 0 }} &#8457; <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> {{ w.weather[0].description | capitalize }}
+</li>
+</ul>
